@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <script>
+        
+        let low = 0;
+        let high = 100;
+        let guess;
+
+        while (true) {
+            guess = parseInt((low + high) / 2);
+            let response = prompt(`Ваше число > ${guess}, < ${guess} или == ${guess}?`);
+
+            if (response === "==") {
+                document.write(`Ваше число: ${guess}`);
+                break;
+            } else if (response === ">") {
+                low = guess + 1;
+            } else if (response === "<") {
+                high = guess - 1;
+            } else {
+                document.write("Неверный ввод");
+            }
+        }
+
+    </script>
+</body>
+</html>

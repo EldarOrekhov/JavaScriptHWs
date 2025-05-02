@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <script>
+        
+        let num = prompt("Введите номер билета");
+        if (num.length == 6) {
+            let firstHalf = num.slice(0, 3);
+            let secondHalf = num.slice(3, 6);
+            let sum1 = 0;
+            let sum2 = 0;
+            for (let i = 0; i < 3; i++) {
+                sum1 += Number(firstHalf[i]);
+                sum2 += Number(secondHalf[i]);
+            }
+            if (sum1 == sum2) {
+                document.write("Билет счастливый<br>");
+            } else {
+                document.write("Билет не счастливый<br>");
+            }
+        } else {
+            document.write("Неверный ввод");
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+</head>
+<body>
+    <script>
+        
+        let res;
+        do {
+            fio = prompt("Введите ФИО");
+            gender = prompt("введите пол");
+            age = prompt("Введите возраст");
+            email = prompt("Введите email");
+            res = confirm(`ФИО: ${fio}\nПол: ${gender}\nВозраст: ${age}\nEmail: ${email}\n\nВсе верно?`);
+            if (res) {
+                alert("Данные введены успешно");
+            }
+            else {
+                alert("Повторите ввод");
+            } 
+        } while (!res);
+        
+    </script>
+</body>
+</html>
