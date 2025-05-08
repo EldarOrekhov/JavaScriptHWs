@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let calculator = (problem) => {
+            [a, operator, b] = problem.split(" ");
+            a = parseInt(a);
+            b = parseInt(b);
+            switch (operator) {
+                case '+':
+                    return a + b;
+                case '-':
+                    return a - b;
+                case '*':
+                    return a * b;
+                case '/':
+                    return a / b;
+                default: return "Неверный ввод";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        document.writeln(`+ ${calculator("5 + 5")}<br>`);
+        document.writeln(`- ${calculator("5 - 5")}<br>`);
+        document.writeln(`* ${calculator("5 * 5")}<br>`);
+        document.writeln(`/ ${calculator("5 / 5")}<br>`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createAbbreviation(phrase) {
+            let abbreviation = "";
+            const words = phrase.split(" ");
+            for (let i = 0; i < words.length; i++) {
+                abbreviation += words[i][0].toUpperCase();
+            }
+            return abbreviation;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        document.write(createAbbreviation("cascading style sheets"));
+    </script>
+</body>
+
+</html>

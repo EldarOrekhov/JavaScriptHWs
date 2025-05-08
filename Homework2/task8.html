@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function parseUrl(url) {
+            const protocolEnd = url.indexOf("://");
+            const protocol = protocolEnd !== -1 ? url.substring(0, protocolEnd) : "unknown";
+
+            const domainStart = protocolEnd + 3;
+            const pathStart = url.indexOf("/", domainStart);
+            const domain = pathStart !== -1 ? url.substring(domainStart, pathStart) : url.substring(domainStart);
+
+            const path = pathStart !== -1 ? url.substring(pathStart) : "/";
+
+            return `протокол: ${protocol}, домен: ${domain}, путь: ${path}`;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        document.write(parseUrl("https://itstep.org/ua/about"));
+    </script>
+</body>
+
+</html>

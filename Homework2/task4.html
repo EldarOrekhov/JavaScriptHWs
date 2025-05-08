@@ -1,0 +1,27 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function camelCase(str) {
+            const words = str.split("-");
+            let result = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                result += words[i].charAt(0).toUpperCase() + words[i].slice(1);
+            }
+
+            return result;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        document.write(camelCase("font-size") + "<br>");
+        document.write(camelCase("background-color") + "<br>");
+        document.write(camelCase("text-align") + "<br>");
+    </script>
+</body>
+
+</html>

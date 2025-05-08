@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcInStr(str) {
+            let ch = 0, digit = 0, other = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] >= '0' && str[i] <= '9')
+                    digit++;
+                else if ((str[i] > 'А' && str[i] < 'Я') || (str[i] > 'а' && str[i] < 'я') ||
+                    (str[i] > 'A' && str[i] < 'Z') || (str[i] > 'a' && str[i] < 'z'))
+                    ch++;
+                else
+                    other++;
+            }
+            document.writeln(`Количество букв = ${ch.toString().fontcolor("red")} <br>`)
+            document.writeln(`Количество цифр = ${digit.toString().fontcolor("red")} <br>`)
+            document.writeln(`Количество других символов = ${other.toString().fontcolor("red")} <br>`)
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        let str = "Hello world 12345";
+        calcInStr(str);
+    </script>
+</body>
+
+</html>

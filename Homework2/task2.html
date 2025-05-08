@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function numberToWords(num) {
+            if (num < 10 || num > 99) {
+                return "Введите двузначное число";
+            }
+
+            const ones = ["", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"];
+            const teens = ["десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать"];
+            const tens = ["", "", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто"];
+
+            let result = "";
+
+            if (num >= 10 && num < 20) {
+                result = teens[num - 10];
+            } else {
+                const tensPart = parseInt(num / 10);
+                const onesPart = num % 10;
+                result = tens[tensPart] + (onesPart > 0 ? " " + ones[onesPart] : "");
+            }
+
+            return result;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        document.write(numberToWords(99));
+    </script>
+</body>
+
+</html>

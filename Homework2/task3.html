@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function swapCase(input) {
+            let result = '';
+            for (let i = 0; i < input.length; i++) {
+                let char = input[i];
+                if ((char >= 'a' && char <= 'z') || (char >= 'а' && char <= 'я')) {
+                    result += char.toUpperCase();
+                } else if ((char >= 'A' && char <= 'Z') || (char >= 'А' && char <= 'Я')) {
+                    result += char.toLowerCase();
+                } else if (char >= '0' && char <= '9') {
+                    result += '_';
+                } else {
+                    result += char;
+                }
+            }
+            return result;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        document.write(swapCase("Hello World 123"));
+    </script>
+</body>
+
+</html>
